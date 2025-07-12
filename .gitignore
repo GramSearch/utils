@@ -1,0 +1,14 @@
+.idea
+node_modules
+dist
+.env
+.session
+.DS_Store
+config.yaml
+.postgres/
+out/
+typed-router.d.ts
+auto-imports.d.ts
+components.d.ts
+.eslintcache
+node-compile-cache
