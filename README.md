@@ -1,6 +1,6 @@
 # `@tg-search/utils`
 
-## Instalation
+## Installation
 
 ```bash
 pnpm add @tg-search/result
