@@ -16,7 +16,7 @@
     "build": "tsdown",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
+  "devDependencies": {
     "tsdown": "^0.12.9"
   }
 }
