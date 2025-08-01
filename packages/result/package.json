@@ -1,7 +1,7 @@
 {
   "name": "@tg-search/result",
   "type": "module",
-  "version": "1.0.0-beta.18",
+  "version": "1.1.0",
   "exports": {
     ".": "./dist/index.mjs"
   },
