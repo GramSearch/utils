@@ -1,4 +1,4 @@
-import { Format, LogLevel, setGlobalFormat, setGlobalLogLevel, useLogg } from '@guiiai/logg'
+import { Format, getGlobalFormat, LogLevel, setGlobalFormat, setGlobalLogLevel, useLogg } from '@guiiai/logg'
 import ErrorStackParser from 'error-stack-parser'
 import path from 'path-browserify-esm'
 
@@ -18,6 +18,10 @@ export function initLogger(
   logger.withFields({ level: LogLevel[level], format }).log('Logger initialized')
 }
 
+function shouldUseHyperlink() {
+  return !isBrowser() && getGlobalFormat() === Format.Pretty
+}
+
 export function useLogger(name?: string): Logger {
   // eslint-disable-next-line unicorn/error-message
   const stack = ErrorStackParser.parse(new Error())
@@ -26,6 +30,6 @@ export function useLogger(name?: string): Logger {
   const fileName = path.join(...basePath.split(path.sep).slice(-2))
 
   const nameToDisplay = name || `${fileName}:${currentStack.lineNumber}`
-  const hyperlink = !isBrowser() ? `\x1B]8;;file://${basePath}\x1B\\${nameToDisplay}\x1B]8;;\x1B\\` : nameToDisplay
+  const hyperlink = shouldUseHyperlink() ? `\x1B]8;;file://${basePath}\x1B\\${nameToDisplay}\x1B]8;;\x1B\\` : nameToDisplay
   return useLogg(hyperlink).useGlobalConfig()
 }
