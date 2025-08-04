@@ -1,5 +1,5 @@
 {
-  "name": "@tg-search/utils",
+  "name": "@unbird/utils",
   "type": "module",
   "version": "1.0.0",
   "private": true,
@@ -14,7 +14,7 @@
     "typecheck": "pnpm -r --parallel typecheck"
   },
   "devDependencies": {
-    "@tg-search/eslint-config": "workspace:*",
+    "@unbird/eslint-config": "workspace:*",
     "@types/node": "^24.0.12",
     "eslint": "^9.30.1",
     "typescript": "^5.8.3",

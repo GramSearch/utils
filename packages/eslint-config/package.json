@@ -1,5 +1,5 @@
 {
-  "name": "@tg-search/eslint-config",
+  "name": "@unbird/eslint-config",
   "type": "module",
   "version": "1.0.1",
   "exports": {
