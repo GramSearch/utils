@@ -1,9 +1,16 @@
 {
   "name": "@unbird/logg",
   "type": "module",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "exports": {
-    ".": "./dist/index.mjs"
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./utils": {
+      "types": "./dist/utils.d.mts",
+      "import": "./dist/utils.mjs"
+    }
   },
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
