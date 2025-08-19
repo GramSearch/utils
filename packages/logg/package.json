@@ -29,6 +29,6 @@
     "path-browserify-esm": "^1.0.6"
   },
   "devDependencies": {
-    "tsdown": "^0.12.9"
+    "tsdown": "^0.14.1"
   }
 }
